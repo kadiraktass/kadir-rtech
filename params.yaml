@@ -1,0 +1,13 @@
+background_b: 255
+background_g: 86
+background_r: 150
+rosdistro: 'indigo
+
+  '
+roslaunch:
+  uris: {host_ims_lab12__44491: 'http://ims-lab12:44491/'}
+rosversion: '1.11.21
+
+  '
+run_id: e4f457b6-993b-11e7-8c60-28e34724ae36
+turtlesim: {name: my_turtle}

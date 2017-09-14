@@ -1,0 +1,8 @@
+prefix=/home/tudeng/Desktop/kadir-rtech/install
+
+Name: beginner_tutorials
+Description: Description of beginner_tutorials
+Version: 0.0.0
+Cflags: -I/home/tudeng/Desktop/kadir-rtech/install/include
+Libs: -L/home/tudeng/Desktop/kadir-rtech/install/lib 
+Requires: message_runtime
