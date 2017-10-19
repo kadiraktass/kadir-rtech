@@ -1,0 +1,10 @@
+<launch>
+
+<node pkg="point_visualizer" name="position_publisher" type="position_publisher"/>
+
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find point_visualizer)/config/rviz_config.rviz" />
+
+<node pkg="tf" name="static_transform_publisher" type="static_transform_publisher" args="0 0 0 0 0 0 /position /map 10"/>
+
+
+</launch>
