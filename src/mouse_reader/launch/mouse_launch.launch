@@ -1,0 +1,10 @@
+<launch>
+
+<node pkg="mouse_reader" name="mouse_reader_node" type="mouse_reader_node"/>
+
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find mouse_reader)/config/rviz_config.rviz" />
+
+<node pkg="tf" name="static_transform_publisher" type="static_transform_publisher" args="0 0 0 0 0 0 /position /map 10"/>
+
+
+</launch>
