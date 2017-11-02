@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   message_generation
+  #geometry_msgs
 )
 
 
@@ -49,10 +50,10 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-add_message_files(DIRECTORY msg FILES  mouse_msg.msg)
-
-generate_messages(DEPENDENCIES
-   std_msgs)
+#add_message_files(DIRECTORY msg FILES  mouse_msg.msg geometry_msgs)
+#add_message_files(DIRECTORY msg FILES  mouse_msg.msg)
+add_message_files(FILES  mouse_msg.msg)
+generate_messages(DEPENDENCIES std_msgs)
 #find_package(message_generation)
 catkin_package(CATKIN_DEPENDS message_runtime)
 

@@ -12,12 +12,9 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   message_generation
+  #geometry_msgs
 )
 
-
-add_executable(mouse_reader_node src/mouse_reader_node.cpp)
-target_link_libraries(mouse_reader_node ${catkin_LIBRARIES})
-add_dependencies(mouse_reader_node generate_messages)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -53,10 +50,10 @@ add_dependencies(mouse_reader_node generate_messages)
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-add_message_files(DIRECTORY msg FILES  mouse_msg.msg)
-
-generate_messages(DEPENDENCIES
-   std_msgs)
+#add_message_files(DIRECTORY msg FILES  mouse_msg.msg geometry_msgs)
+#add_message_files(DIRECTORY msg FILES  mouse_msg.msg)
+add_message_files(FILES  mouse_msg.msg)
+generate_messages(DEPENDENCIES std_msgs geometry_msgs)
 #find_package(message_generation)
 catkin_package(CATKIN_DEPENDS message_runtime)
 
@@ -205,3 +202,10 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+
+add_executable(mouse_reader_node src/mouse_reader_node.cpp)
+target_link_libraries(mouse_reader_node ${catkin_LIBRARIES})
+add_dependencies(mouse_reader_node generate_messages)
+
+

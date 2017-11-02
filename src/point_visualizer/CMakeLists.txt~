@@ -14,10 +14,10 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
 )
 
-
+generate_messages(DEPENDENCIES geometry_msgs std_msgs)
 add_executable(position_publisher src/position_publisher.cpp)
 target_link_libraries(position_publisher ${catkin_LIBRARIES})
-#add_dependencies(position_publisher beginner_tutorials_generate_messages_cpp)
+add_dependencies(position_publisher generate_messages)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)

@@ -4,7 +4,8 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include "mouse_reader/mouse_msg.h"
+//#include "mouse_reader/mouse_msg.h"
+#include <mouse_reader/mouse_msg.h>
 #define MOUSEFILE "/dev/input/event4"
 
 int main(int argc, char **argv)
@@ -15,8 +16,8 @@ ros::init(argc, argv, "mouse_reader_node");
 ros::NodeHandle n;
 
 //ros::Publisher position_pub = n.advertise<geometry_msgs::PointStamped>("position", 1000);
-ros::Publisher position_pub = n.advertise<mouse_reader::mouse_msg>("position", 1000);
-ros::Rate loop_rate(10);
+ros::Publisher position_pub = n.advertise<mouse_reader::mouse_msg>("mouse_position", 1000);
+//ros::Rate loop_rate(10);
 mouse_reader::mouse_msg position;
 //geometry_msgs::PointStamped position;
 //position.header.frame_id = "position";
@@ -76,7 +77,7 @@ position.z =0;
 	
 	ros::spinOnce();
  	
-	loop_rate.sleep();
+	//loop_rate.sleep();
 	
   }
 

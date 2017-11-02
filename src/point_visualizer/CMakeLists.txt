@@ -12,9 +12,10 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  mouse_reader
 )
 
-generate_messages(DEPENDENCIES geometry_msgs)
+generate_messages(DEPENDENCIES geometry_msgs std_msgs)
 add_executable(position_publisher src/position_publisher.cpp)
 target_link_libraries(position_publisher ${catkin_LIBRARIES})
 add_dependencies(position_publisher generate_messages)
