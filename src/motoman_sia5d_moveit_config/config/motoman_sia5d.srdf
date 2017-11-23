@@ -22,23 +22,14 @@
         <joint name="joint_t" value="0" />
         <joint name="joint_u" value="0" />
     </group_state>
-    <group_state name="new_pose1" group="sia5">
-        <joint name="joint_b" value="-0,0863" />
-        <joint name="joint_e" value="0,2667" />
-        <joint name="joint_l" value="-0,151" />
+    <group_state name="my_pose1" group="sia5">
+        <joint name="joint_b" value="0" />
+        <joint name="joint_e" value="0" />
+        <joint name="joint_l" value="0" />
         <joint name="joint_r" value="0" />
-        <joint name="joint_s" value="0,953" />
-        <joint name="joint_t" value="0,1412" />
-        <joint name="joint_u" value="-0,3245" />
-    </group_state>
-    <group_state name="new_pose2" group="sia5">
-        <joint name="joint_b" value="-1,0138" />
-        <joint name="joint_e" value="-0,6334" />
-        <joint name="joint_l" value="-0,151" />
-        <joint name="joint_r" value="0" />
-        <joint name="joint_s" value="0,953" />
+        <joint name="joint_s" value="1" />
         <joint name="joint_t" value="0" />
-        <joint name="joint_u" value="0,8413" />
+        <joint name="joint_u" value="0" />
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="my_end_effector" parent_link="tool0" group="sia5" />
