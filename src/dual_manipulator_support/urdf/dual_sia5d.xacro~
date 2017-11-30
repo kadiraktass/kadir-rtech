@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<robot name="dual" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find motoman_sia5d_support)/urdf/sia5d_macro.xacro"/>
+  <xacro:property name="pi" value="3.141592654" />
+
+  <material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
+
+  <xacro:macro name="default_inertial" params="mass">
+    <inertial>
+      <mass value="${mass}" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </xacro:macro>
+
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="3 0.75 1"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0 0 0"/>
+      </geometry>
+    </collision>
+    <xacro:default_inertial mass="10"/>
+  </link>
+
+  <xacro:motoman_sia5d prefix="first_"/>
+  <joint name="first_motoman" type="fixed">
+    <origin xyz="1 0 0.5" rpy="0 0 ${pi/2}"/>
+    <parent link="base_link"/>
+    <child link="first_base_link"/>
+  </joint>
+ 
+  <xacro:motoman_sia5d prefix="second_"/>
+  <joint name="second_motoman" type="fixed">
+    <origin xyz="-1 0 0.5" rpy="0 0 ${pi/2}"/>
+    <parent link="base_link"/>
+    <child link="second_base_link"/>
+  </joint>-->
+</robot>

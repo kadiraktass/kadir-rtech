@@ -26,6 +26,9 @@ ros::NodeHandle n;
   geometry_msgs::Pose target_pose1;
 
 
+  target_pose1.orientation.x = currentPose.pose.orientation.x;
+  target_pose1.orientation.y = currentPose.pose.orientation.y;
+  target_pose1.orientation.z = currentPose.pose.orientation.z;
   target_pose1.orientation.w = currentPose.pose.orientation.w;
   target_pose1.position.x = currentPose.pose.position.x;
   target_pose1.position.y = currentPose.pose.position.y;
