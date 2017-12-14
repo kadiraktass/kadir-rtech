@@ -11,7 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
-  message_generation
+#  message_generation
   #geometry_msgs
 )
 
@@ -52,10 +52,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
 #add_message_files(DIRECTORY msg FILES  mouse_msg.msg geometry_msgs)
 #add_message_files(DIRECTORY msg FILES  mouse_msg.msg)
-add_message_files(FILES  mouse_msg.msg)
-generate_messages(DEPENDENCIES std_msgs)
+#add_message_files(FILES  mouse_msg.msg)
+#generate_messages(DEPENDENCIES std_msgs)
 #find_package(message_generation)
-catkin_package(CATKIN_DEPENDS message_runtime)
+#catkin_package(CATKIN_DEPENDS message_runtime)
 
 #
 ## Generate services in the 'srv' folder
@@ -204,8 +204,8 @@ include_directories(
 # catkin_add_nosetests(test)
 
 
-add_executable(mouse_reader_node src/mouse_reader_node.cpp)
-target_link_libraries(mouse_reader_node ${catkin_LIBRARIES})
-add_dependencies(mouse_reader_node generate_messages)
+#add_executable(mouse_reader_node src/mouse_reader_node.cpp)
+#target_link_libraries(mouse_reader_node ${catkin_LIBRARIES})
+#add_dependencies(mouse_reader_node generate_messages)
 
 
