@@ -577,18 +577,9 @@ int main( int argc, char** argv )
     sleep(1);
     marker_pub.publish(marker17);
     sleep(1);
-// %EndTag(PUBLISH)%
-
-    // Cycle between different shapes
-    //shape = visualization_msgs::Marker::SPHERE;
-    //  shape = visualization_msgs::Marker::CYLINDER;
 
     
-// %EndTag(CYCLE_SHAPES)%
 
-// %Tag(SLEEP_END)%
     r.sleep();
   }
-// %EndTag(SLEEP_END)%
 }
-// %EndTag(FULLTEXT)%
