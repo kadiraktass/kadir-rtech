@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  mouse_reader
 )
 
 generate_messages(DEPENDENCIES geometry_msgs std_msgs)

@@ -8,17 +8,17 @@ project(point_visualizer)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  geometry_msgs
+#  geometry_msgs
   roscpp
   rospy
-  std_msgs
-  mouse_reader
+ # std_msgs
+ # mouse_reader
 )
 
-generate_messages(DEPENDENCIES geometry_msgs std_msgs)
-add_executable(position_publisher src/position_publisher.cpp)
-target_link_libraries(position_publisher ${catkin_LIBRARIES})
-add_dependencies(position_publisher generate_messages)
+#generate_messages(DEPENDENCIES geometry_msgs std_msgs)
+#add_executable(position_publisher src/position_publisher.cpp)
+#target_link_libraries(position_publisher ${catkin_LIBRARIES})
+#add_dependencies(position_publisher generate_messages)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
